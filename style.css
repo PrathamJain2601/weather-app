@@ -1,0 +1,100 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    height:100vh;
+    width:100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box{
+    height:60vh;
+    width:20vw;
+    box-shadow: 0 0.2rem 3rem rgba(0, 0, 0, 0.2);
+    background-color: #a5bbdd;
+    position: relative;
+    overflow: hidden;
+}
+
+.wave{
+    opacity: 0.3;
+    position:absolute;
+    height:500px;
+    width:500px;
+    transform-origin: 50% 46%;
+    border-radius: 220px;
+    background: white;
+    animation: drift 4s 0s infinite linear;
+}
+.wave1{
+    top:50%;
+    left: -30%;
+    z-index: 1;
+}
+.wave2{
+    top:45%;
+    left: -20%;
+    z-index: 2;
+}
+.wave3{
+    top:48%;
+    left: -10%;
+    z-index: 3;
+}
+@keyframes drift{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+#weatherIcon{
+    height: 60vh;
+    pointer-events: none;
+    position:relative;
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+#icon{
+    width:80%;
+    height:30%;
+    display: flex;
+    /* background-color: red; */
+    align-items: center;
+    justify-content: center;
+}
+#icon img{
+    height:100%;
+}
+.info{
+    height:40%;
+    /* background-color: red; */
+    text-align: center;
+}
+.info h2{
+    padding-top:2rem;
+    font-size: 2rem;
+}
+.info p{
+    color:#57606f;
+    font-size:1rem;
+}
+.info h1{
+    padding-top:1.75rem;
+    font-size: 2rem;
+}
+.info h3{
+    font-weight: 100;
+    color:#57606f;
+    font-size:1rem;
+}
